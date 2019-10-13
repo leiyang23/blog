@@ -214,7 +214,7 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  Github: https://github.com/leiyang23
+  github: https://github.com/leiyang23
 
 
 # Social Links Icons
