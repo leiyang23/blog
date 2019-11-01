@@ -1,5 +1,5 @@
 ---
-title: 2019-10-30-django + celery + channels部署  
+title: django + celery + channels部署  
 description:  
 date: 2019-10-30 1:34  
 categories:
