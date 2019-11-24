@@ -52,6 +52,9 @@ startsecs=3
 celery 部署采用的是 Generic init-scripts 方式 [文档](http://docs.celeryproject.org/en/latest/userguide/daemonizing.html#generic-init-scripts)
 但是服务器上是没有 celeryd 和 celerybeat 这两个脚本的，我们需要从[这里](https://github.com/celery/celery/tree/master/extra/generic-init.d/)
 将这两文文件复制到 `/etc/init.d/`路径下。然后再按照文档的说明进行配置就可以了。  
+但是最佳的方案是将配置文件和项目放在一块：在 celeryd 和 celerybeat 这两个脚本中，_config_sanity 函数负责解析配置文件，
+可以修改配置的路径。
+这两个脚本也没必要放置在 `/etc/init.d/` 路径下。
 
 #### nginx 
 主要就是 websocket 的转发问题，这个和 uwsgi 相似，添加以下配置。
