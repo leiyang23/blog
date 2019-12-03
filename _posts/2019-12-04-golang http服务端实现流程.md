@@ -8,8 +8,7 @@ categories:
 tags:  
 - net/http
  
----
-    	
+---    	
 ### net/http 包实现服务端流程
 核心就是 实现一个路由器，可以把我们写的处理单元和路由建立映射。     
 在 net/http 中， ServeMux 就是我们要找的路由器。ServeMux 是一种数据结构，其中一个叫 m 的 map 类型就用来存储
