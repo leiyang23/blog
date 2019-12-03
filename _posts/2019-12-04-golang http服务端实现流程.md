@@ -9,20 +9,6 @@ tags:
 - net/http
  
 ---
-
-// 初始化一个 ServeMux 类型变量，这样我们新建的 mux 变量就具备了很多能力（方法），
-	// 我们可以在初始化时提供值，但是 ServeMux 提供了一个方法可以动态地添加。
-	// Handle 方法是一个入口方法，用来将 url 和 我们的 Handler 写到 mux 的 map 中。
-	// 所谓 Handler 就是一个接口，这个接口只有一个 ServeHTTP 方法，实现了这个方法就行。
-		// 监听 8000 端口，每次接收到请求后都会调用 mux 的 ServeHTTP 方法。
-    	// 在 ServeMux 的 ServeHTTP 中，会调用 自己的 Handler 方法，解析出 host 和 url，
-    	// 然后传递给自己的 handler 方法，handler 方法将 url path 传递给自己的 match 方法，
-    	// 而 match 则根据 handle 注册的 url 和 Handler 的映射关系找到对应的 Handler,
-    	// 此时回到 mux 的 ServeHTTP 中继续执行，这是继续调用找到的 Handler 的 ServeHTTP 方法，
-    
-    	// Handler 的 ServeHTTP 方法和 ServeMux 的作用不同
-    	// 通过 http.HandlerFunc 将我们写的处理函数强制转换成 http.HandlerFunc 结构。使我们的
-    	// 函数一下就实现了 Handler 接口 -- 具备 ServeHTTP 方法。
     	
 ### net/http 包实现服务端流程
 核心就是 实现一个路由器，可以把我们写的处理单元和路由建立映射。     
