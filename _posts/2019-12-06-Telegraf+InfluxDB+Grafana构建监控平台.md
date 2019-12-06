@@ -57,9 +57,9 @@ EOF
 
 然后是导入配置：
 ![看配置板导入](http://qiniu2.freaks.group/grafana%20%E7%9C%8B%E6%9D%BF%E5%AF%BC%E5%85%A5.png)     
-一个针对 telegraf 的配置地址：https://grafana.com/grafana/dashboards/928。   
+一个针对 telegraf 的配置地址：`https://grafana.com/grafana/dashboards/928`。   
 
-
+> 参考文档：https://juejin.im/post/5b4568c851882519790c72f3
     
 
 
